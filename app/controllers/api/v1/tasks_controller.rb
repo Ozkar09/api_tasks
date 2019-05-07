@@ -20,6 +20,8 @@ class Api::V1::TasksController < ApplicationController
   end
 
   def update
+    p "*" * 50
+    p params
     @task = Task.find(params[:id])
     @task.update(task_params)
   end
